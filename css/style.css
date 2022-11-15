@@ -1,0 +1,39 @@
+/*
+Colors:
+
+Background: #fafad2
+Header & Footer: #EF5350
+Text: #3761A8
+
+*/
+* {
+    box-sizing: border-box;
+}
+
+:root {
+
+    --background: #fafad2;
+    --headings: #EF5350;
+    --primary-color: #3761A8;
+    --white: #fff
+}
+
+
+body {
+    background-color: var(--background);
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--headings);
+    color: white;
+}
+
+div {
+    text-align: center;
+    margin-top: 0;
+    font-size: 30px;
+}
