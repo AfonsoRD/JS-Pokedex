@@ -21,3 +21,13 @@ let pokemonList = [
     }
 
 ];
+
+
+let text = " ";
+let i = 0
+for (;pokemonList[i];){
+  text = text + pokemonList[i].name + " (height: " + pokemonList[i].height +") ";
+  i++;
+}
+
+document.write(text);
