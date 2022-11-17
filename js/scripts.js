@@ -59,6 +59,22 @@ pokemonRepository.getAll().forEach(printPokemonList)
 
 
 
+
+let bigPokemons = pokemonRepository.getAll();
+
+bigPokemons = bigPokemons.filter(x => x.height >= 0.7);
+
+console.log(bigPokemons);
+
+
+
+
+
+
+
+
+
+
 /* 'FOR' loop
 for loop that iterates over each item in pokemonList and will highlight one pokemon with height superior than 0.6
      add tag <br> for break and <strong> for bold text:
