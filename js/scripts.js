@@ -27,9 +27,13 @@ let pokemonRepository = (function () {
         return pokemonList;
     }
 
-    function add(pokemon) {
-        pokemonList.push(pokemon);
-    } 
+    function add (pokemon) {
+        if (typeof pokemon === 'object' && pokemon.name && pokemon.height && pokemon.type && Object.keys(pokemon).length === 3) {
+			pokemonList.push(pokemon);
+		} else { 
+            document.write("Pokemon is not valid")
+        }
+	} 
 
     return {
         getAll: getAll,
@@ -37,6 +41,8 @@ let pokemonRepository = (function () {
     }
 
 })();
+
+
 
 // forEach loop     
     
@@ -48,8 +54,9 @@ function printPokemonList(pokemon) {
     }
 }
 
-pokemonRepository.add({ name: 'Snorlak', height: '2.1', type: 'normal' })
+pokemonRepository.add({name:'Snorlak',height: 2.1, type: 'normal'})
 pokemonRepository.getAll().forEach(printPokemonList)    
+
 
 
 /* 'FOR' loop
