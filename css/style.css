@@ -29,8 +29,10 @@ body {
     background-color: var(--background);
     color: var(--primary-color);
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.6;
+    text-align: center;
+    margin-top: 0;
+    font-size: 30px;
 }
 
 header {
@@ -38,11 +40,15 @@ header {
     color: white;
 }
 
-div {
-    text-align: center;
-    margin-top: 0;
-    font-size: 30px;
+h1, h2, h3 {
+
+    font-family: 'Abril Fatface', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--background);
 }
+
+
 
 .button {
     border: none;
@@ -50,13 +56,17 @@ div {
     font-family: inherit;
     background-color: var(--headings);
     color: var(--background);
+    text-align: center;
     text-decoration: none;
     font-size: 18px;
     width: 20%;
+    min-width: fit-content;
     padding: 10px;
     border-radius: 0 10px;
     border-bottom: 2px solid var(--primary-color);
     transition: 0.2s opacity;
+    margin: auto;
+
 }
 
 .button:hover,
@@ -69,4 +79,40 @@ div {
 
 ul {
     list-style-type: none;
+}
+
+@media all and (max-width: 750px) {
+
+    @media all and (min-width: 500px) and (max-width: 750px) {
+        h1 {
+            font-size: 48px;
+        }
+
+        .button {
+            font-size: 30px;
+            width: 70%;
+        }
+
+        body {
+            line-height: 2.1;
+            text-align: center;
+        }
+    }
+
+    @media all and (max-width: 500px) {
+        h1 {
+            font-size: 35px;
+        }
+
+        .button {
+            font-size: 25px;
+            width: 80%;
+        }
+
+        body {
+            line-height: 1.8;
+            text-align: center;
+        }
+    }
+
 }
