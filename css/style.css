@@ -18,6 +18,12 @@ Text: #3761A8
     --white: #fff
 }
 
+.page-content {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 body {
     background-color: var(--background);
@@ -36,4 +42,31 @@ div {
     text-align: center;
     margin-top: 0;
     font-size: 30px;
+}
+
+.button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: var(--headings);
+    color: var(--background);
+    text-decoration: none;
+    font-size: 18px;
+    width: 20%;
+    padding: 10px;
+    border-radius: 0 10px;
+    border-bottom: 2px solid var(--primary-color);
+    transition: 0.2s opacity;
+}
+
+.button:hover,
+.button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+}
+
+ul {
+    list-style-type: none;
 }
