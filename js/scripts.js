@@ -23,12 +23,13 @@ let pokemonRepository = (function () {
     
     ];
 
-    
+    // get All Pokemons
     function getAll() {
         return pokemonList;
     }
-    
 
+
+    // Add Pokemon function
     function add (pokemon) {
         if (typeof pokemon === 'object' && pokemon.name && pokemon.height && pokemon.type && Object.keys(pokemon).length === 3) {
 			pokemonList.push(pokemon);
@@ -49,19 +50,38 @@ let pokemonRepository = (function () {
 
         let button = document.createElement('button');
         button.innerText = pokemon.name
-        button.classList.add('button');
 
+    
+        eventListener(button, pokemon.name);
+        button.classList.add('button');
         listItem.appendChild(button);
-        pokemonList.appendChild(listItem)
+        pokemonList.appendChild(listItem);
+
+        // Event Listener
+        /*button.addEventListener('click', function (Event) {
+            showDetails(pokemon)
+        });*/
+        
+    }
+
+    function eventListener(button, pokemon) {
+        button.addEventListener("click", function () {
+          showDetails(pokemon);
+        });
+      }
         
 
+
+    function showDetails(pokemon) { 
+        console.log(pokemon);
     }
      
 
     return {
         getAll: getAll,
         add: add, 
-        addPokemonList: addPokemonList
+        addPokemonList: addPokemonList,
+        showDetails: showDetails
     }
 
 })();
@@ -75,43 +95,6 @@ pokemonRepository.add({ name: 'Snorlak', height: 2.1, type: 'normal' })
 pokemonRepository.getAll().forEach(function (pokemon) { 
     pokemonRepository.addPokemonList(pokemon);
 })   
-
-
-
-
-// Filter for Big pokemons
-/*
-let bigPokemons = pokemonRepository.getAll();
-
-bigPokemons = bigPokemons.filter(x => x.height >= 0.7);
-
-console.log(bigPokemons);
-*/
-
-
-
-
-
-
-/* 'FOR' loop
-for loop that iterates over each item in pokemonList and will highlight one pokemon with height superior than 0.6
-     add tag <br> for break and <strong> for bold text:
-    this inline css will be removed when start to structure the html
-    
-
-    
-for (let i = 0; i < pokemonList.length; i++) {
-    
-        if(pokemonList[i].height > 0.6) {
-            document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') -' + ' <strong>Wow, that\’s big!</strong><br>');
-        } else {
-            document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')<br>');
-        }
-}
-
-document.write(pokemonList[i].pokemon);
-
-*/
 
 
 
