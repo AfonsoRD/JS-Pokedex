@@ -1,0 +1,135 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: >0.3%,last 2 versions,not dead
+*/
+
+/*
+Colors:
+
+Background: #fafad2
+Header & Footer: #EF5350
+Text: #3761A8
+
+*/
+* {
+    box-sizing: border-box;
+}
+
+.page-content {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+body {
+    background-color: #fafad2;
+    color: #3761A8;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 0;
+    font-size: 30px;
+}
+
+header {
+    background-color: #EF5350;
+    color: white;
+}
+
+h1 {
+
+    font-family: 'Abril Fatface', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fafad2;
+}
+
+h2 {
+
+    font-family: 'Abril Fatface', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fafad2;
+}
+
+h3 {
+
+    font-family: 'Abril Fatface', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fafad2;
+}
+
+
+
+.button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: #EF5350;
+    color: #fafad2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    width: 20%;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    padding: 10px;
+    border-radius: 0 10px;
+    border-bottom: 2px solid #3761A8;
+    transition: 0.2s opacity;
+    margin: auto;
+
+}
+
+.button:hover,
+.button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+}
+
+ul {
+    list-style-type: none;
+}
+
+@media all and (max-width: 750px) {
+
+    @media all and (min-width: 500px) and (max-width: 750px) {
+        h1 {
+            font-size: 48px;
+        }
+
+        .button {
+            font-size: 30px;
+            width: 70%;
+        }
+
+        body {
+            line-height: 2.1;
+            text-align: center;
+        }
+    }
+
+    @media all and (max-width: 500px) {
+        h1 {
+            font-size: 35px;
+        }
+
+        .button {
+            font-size: 25px;
+            width: 80%;
+        }
+
+        body {
+            line-height: 1.8;
+            text-align: center;
+        }
+    }
+
+}
