@@ -39,6 +39,19 @@ header {
     color: white;
 }
 
+.loading {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    /* calculation = 500px/2 = 250px */
+    margin-top: -250px;
+
+}
+
+
 h1 {
 
     font-family: 'Abril Fatface', cursive;
@@ -47,6 +60,7 @@ h1 {
     color: #fafad2;
 }
 
+
 h2 {
 
     font-family: 'Abril Fatface', cursive;
@@ -54,6 +68,7 @@ h2 {
     font-weight: bold;
     color: #fafad2;
 }
+
 
 h3 {
 
