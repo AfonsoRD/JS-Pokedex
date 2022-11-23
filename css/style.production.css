@@ -48,6 +48,8 @@ header {
     margin-left: -250px;
     /* calculation = 500px/2 = 250px */
     margin-top: -250px;
+    /* to show it above other content */
+    z-index: 999;
 
 }
 
