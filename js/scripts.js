@@ -57,7 +57,48 @@ let pokemonRepository = (function () {
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
       console.log(pokemon);
+      /* Implement Modal*/
+      showModal();
     });
+  }
+
+  function showModal(title, text) {
+    /*Select container from HTML page*/
+    let modalContainer = document.querySelector("#modal-container");
+    modalContainer.innerText = " ";
+
+    /*Create DIV and add modal on DOM*/
+    let modal = document.createElement("div");
+    modal.classList.add("modal");
+
+    /* create close and add fav button*/
+    let closeButtonElement = document.createElement("button");
+    let favButtonElement = document.createElement("button");
+    closeButtonElement.classList.add(".modal-close");
+    closeButtonElement.innerHTML = "Close";
+    favButtonElement.classList.add(".modal-fav");
+    favButtonElement.innerHTML = "❤️";
+
+    /*Title with Pokemon name*/
+    let titleElement = document.createElement("h1");
+    titleElement.innerHTML = title;
+
+    /*Add img*/
+    let imageElement = document.createElement("img");
+    imageElement.src = " ";
+
+    /* Element to display text*/
+    let contentElement = document.createElement("p");
+    titleElement.innerHTML = text;
+
+    modal.appendChild(closeButtonElement);
+    modal.appendChild(favButtonElement);
+    modal.appendChild(titleElement);
+    modal.appendChild(imageElement);
+    modal.appendChild(contentElement);
+    modalContainer.appendChild(modal);
+
+    modalContainer.classList.add("is-visible");
   }
 
   function loadList() {
