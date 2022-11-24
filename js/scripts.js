@@ -1,7 +1,7 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
   // load pokemon's list
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=1154";
 
   let loadingImage = document.querySelector(".loading");
 
@@ -80,7 +80,7 @@ let pokemonRepository = (function () {
       /*Title with Pokemon name*/
       let pokemonName = document.createElement("h1");
       pokemonName.classList.add("modal-title");
-      pokemonName.innerHTML = pokemon.name;
+      pokemonName.innerHTML = `#${pokemon.id} ${pokemon.name}`;
 
       /*Add img*/
 
@@ -167,6 +167,7 @@ let pokemonRepository = (function () {
       .then(function (details) {
         // Now we add the details to the item
         pokemon.imageUrl = details.sprites.front_default;
+        pokemon.id = details.id;
         pokemon.height = details.height;
         pokemon.weight = details.weight;
         pokemon.types = details.types;
