@@ -15,6 +15,7 @@ Text: #3761A8
     --background: #fafad2;
     --headings: #EF5350;
     --primary-color: #3761A8;
+    --lightGrey: #777;
     --white: #fff
 }
 
@@ -47,29 +48,6 @@ header {
     margin-right: 5%;
 }
 
-body {
-    background-color: var(--background);
-    color: var(--primary-color);
-    font-weight: 400;
-    line-height: 1.6;
-    text-align: center;
-    margin-top: 0;
-    font-size: 30px;
-}
-
-
-
-
-h1, h2, h3 {
-
-    font-family: 'Abril Fatface', cursive;
-    font-size: 60px;
-    font-weight: bold;
-    color: var(--background);
-}
-
-
-
 .button {
     border: none;
     display: inline-block;
@@ -98,6 +76,29 @@ h1, h2, h3 {
 }
 
 
+body {
+    background-color: var(--background);
+    color: var(--primary-color);
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 0;
+    font-size: 30px;
+}
+
+
+
+
+h1, h2, h3 {
+
+    font-family: 'Abril Fatface', cursive;
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--background);
+}
+
+
+
 #modal-container {
     position: fixed;
     padding: 20px;
@@ -119,25 +120,23 @@ h1, h2, h3 {
 
 .modal {
     margin: auto;
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
     background: var(--white);
     padding: 15px;
     width: 60%;
     height: 80%;
-    max-width: 700px;
+    max-width: 600px;
+    min-height: 600px;
+    min-width: 380px;
     text-align: center;
     object-fit: contain;
 }
 
 .pokemon-img {
-    box-sizing: border-box;
-    margin: auto;
-    display: flex;
     width: 300px;
     height: 300px;
-    max-width: 100%;
-    max-height: 100%;
+
 }
 
 
@@ -145,7 +144,7 @@ h1, h2, h3 {
     float: right;
     border: 0;
     background: none;
-    color: var(--headings);
+    color: var(--lightGrey);
     text-decoration: underline;
 }
 
@@ -154,20 +153,39 @@ h1, h2, h3 {
     border: 0;
     background: none;
     color: var(--headings);
-    text-decoration: underline;
+
 }
 
-.modal h4 {
-    color: var(--headings);
-    text-align: center;
-    font-size: 35px;
+.modal-close:hover,
+.modal-close:focus,
+.modal-fav:hover,
+.moidal-fav:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
 }
 
-.modal p {
-    color: var(--headings);
+.modal-title {
+    margin-top: auto;
     text-align: center;
-    font-size: 18px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--primary-color);
 }
+
+.content-container {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 25px;
+}
+
+.type-container {
+    text-align: center;
+    color: var(--headings);
+    font-size: 20px;
+}
+
 
 
 #modal-container {
