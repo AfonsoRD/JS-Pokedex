@@ -29,12 +29,11 @@ header {
 .loading {
     position: fixed;
     width: 500px;
-    height: 500px;
     left: 50%;
     top: 50%;
     margin-left: -250px;
     /* calculation = 500px/2 = 250px */
-    margin-top: -250px;
+    margin-top: -200px;
     /* to show it above other content */
     z-index: 999;
 
@@ -46,6 +45,36 @@ header {
     margin-left: 5%;
     margin-right: 5%;
 }
+
+.button {
+    border: none;
+    display: inline-block;
+    font-family: inherit;
+    background-color: #EF5350;
+    color: #fafad2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    width: 20%;
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    padding: 10px;
+    border-radius: 0 10px;
+    border-bottom: 2px solid #3761A8;
+    transition: 0.2s opacity;
+    margin: auto;
+
+}
+
+.button:hover,
+.button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+}
+
 
 body {
     background-color: #fafad2;
@@ -92,35 +121,6 @@ h3 {
 
 
 
-.button {
-    border: none;
-    display: inline-block;
-    font-family: inherit;
-    background-color: #EF5350;
-    color: #fafad2;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    width: 20%;
-    min-width: -webkit-fit-content;
-    min-width: -moz-fit-content;
-    min-width: fit-content;
-    padding: 10px;
-    border-radius: 0 10px;
-    border-bottom: 2px solid #3761A8;
-    transition: 0.2s opacity;
-    margin: auto;
-
-}
-
-.button:hover,
-.button:focus {
-    /* lets the mouse appear as a hand when hovering over the button */
-    cursor: pointer;
-    /* reduces the opacity of the button to 80% */
-    opacity: 0.8;
-}
-
 #modal-container {
     position: fixed;
     padding: 20px;
@@ -129,45 +129,97 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #3761A8;
-
+    background: rgba(0, 0, 0, 0.5);
     /* to show it above other content */
     z-index: 999;
-
     /* to allow scrolling if the screen is not high enough*/
     overflow: auto;
-
     /* this is used to center the modal */
     display: grid;
     text-align: center;
 }
 
+
 .modal {
     margin: auto;
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
     background: #fff;
     padding: 15px;
-    width: 100%;
-    max-width: 700px;
-    text-align: left;
+    width: 60%;
+    height: 80%;
+    max-width: 600px;
+    min-height: 600px;
+    min-width: 380px;
+    text-align: center;
+    -o-object-fit: contain;
+    object-fit: contain;
 }
+
+.pokemon-img {
+    width: 300px;
+    height: 300px;
+
+}
+
 
 .modal-close {
     float: right;
     border: 0;
     background: none;
-    color: #EF5350;
+    color: #777;
     text-decoration: underline;
 }
 
-.modal h1 {
-    margin-top: 0;
+.modal-fav {
+    float: left;
+    border: 0;
+    background: none;
+    color: #EF5350;
+
 }
 
-.modal p {
-    margin-bottom: 0;
+.modal-close:hover,
+.modal-close:focus,
+.modal-fav:hover,
+.moidal-fav:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
 }
+
+.modal-title {
+    margin-top: auto;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #3761A8;
+}
+
+.content-container {
+    text-align: center;
+    color: #3761A8;
+    font-size: 25px;
+}
+
+.type-container {
+    text-align: center;
+    color: #EF5350;
+    font-size: 20px;
+}
+
+
+
+#modal-container {
+    display: none;
+}
+
+#modal-container.is-visible {
+    /* CSS for modal container - add own design */
+    display: block;
+}
+
 
 ul {
     list-style-type: none;
