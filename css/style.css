@@ -98,6 +98,7 @@ h1, h2, h3 {
     opacity: 0.8;
 }
 
+
 #modal-container {
     position: fixed;
     padding: 20px;
@@ -106,18 +107,16 @@ h1, h2, h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--primary-color);
-
+    background: rgba(0, 0, 0, 0.5);
     /* to show it above other content */
     z-index: 999;
-
     /* to allow scrolling if the screen is not high enough*/
     overflow: auto;
-
     /* this is used to center the modal */
     display: grid;
     text-align: center;
 }
+
 
 .modal {
     margin: auto;
@@ -125,10 +124,23 @@ h1, h2, h3 {
     box-sizing: border-box;
     background: var(--white);
     padding: 15px;
-    width: 100%;
+    width: 60%;
+    height: 80%;
     max-width: 700px;
-    text-align: left;
+    text-align: center;
+    object-fit: contain;
 }
+
+.pokemon-img {
+    box-sizing: border-box;
+    margin: auto;
+    display: flex;
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
 
 .modal-close {
     float: right;
@@ -138,13 +150,35 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
-.modal h1 {
-    margin-top: 0;
+.modal-fav {
+    float: left;
+    border: 0;
+    background: none;
+    color: var(--headings);
+    text-decoration: underline;
+}
+
+.modal h4 {
+    color: var(--headings);
+    text-align: center;
+    font-size: 35px;
 }
 
 .modal p {
-    margin-bottom: 0;
+    color: var(--headings);
+    text-align: center;
+    font-size: 18px;
 }
+
+#modal-container {
+    display: none;
+}
+
+#modal-container.is-visible {
+    /* CSS for modal container - add own design */
+    display: block;
+}
+
 
 ul {
     list-style-type: none;
