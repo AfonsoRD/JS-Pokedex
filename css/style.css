@@ -48,25 +48,17 @@ Text: #3761A8
 
 .page-content {
     margin-top: 100px;
-    margin-left: 5%;
-    margin-right: 5%;
     text-align: center;
     justify-content: center;
 }
 
 .button {
     border: none;
-    display: inline-block;
     background-color: var(--headings);
     color: var(--background);
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 0 10px;
-    border-bottom: 2px solid var(--primary-color);
+    border-radius: 0 15px;
+    border-bottom: 3px solid var(--primary-color);
     transition: 0.2s opacity;
-    grid-column: 1 span;
-    grid-row: 1 span;
 
 }
 
@@ -113,6 +105,11 @@ h1, h2, h3 {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     row-gap: 50px;
 
+}
+
+.list-group-item {
+    background-color: var(--background);
+    border: none;
 }
 
 /* RESPONSIVE */
