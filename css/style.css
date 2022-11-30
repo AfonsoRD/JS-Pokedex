@@ -6,9 +6,6 @@ Header & Footer: #EF5350
 Text: #3761A8
 
 */
-* {
-    box-sizing: border-box;
-}
 
 :root {
 
@@ -34,8 +31,6 @@ Text: #3761A8
 }
 
 
-
-
 /* BODY */
 
 .loading {
@@ -53,27 +48,25 @@ Text: #3761A8
 
 .page-content {
     margin-top: 100px;
-    margin-bottom: 2%;
     margin-left: 5%;
     margin-right: 5%;
+    text-align: center;
+    justify-content: center;
 }
 
 .button {
     border: none;
     display: inline-block;
-    font-family: inherit;
     background-color: var(--headings);
     color: var(--background);
     text-align: center;
     text-decoration: none;
     font-size: 18px;
-    width: 20%;
-    min-width: fit-content;
-    padding: 10px;
     border-radius: 0 10px;
     border-bottom: 2px solid var(--primary-color);
     transition: 0.2s opacity;
-    margin: auto;
+    grid-column: 1 span;
+    grid-row: 1 span;
 
 }
 
@@ -89,60 +82,22 @@ Text: #3761A8
 body {
     background-color: var(--background);
     color: var(--primary-color);
-    font-weight: 400;
-    line-height: 1.6;
-    text-align: center;
-    margin-top: 0;
     font-size: 30px;
 }
 
 
-
+.hide-item {
+    display: none;
+}
 
 h1, h2, h3 {
 
     font-family: 'Abril Fatface', cursive;
-    font-size: 60px;
+    font-size: 45px;
     font-weight: bold;
-    color: var(--background);
+    color: var(--primary-color);
 }
 
-
-
-#modal-container {
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    /* to show it above other content */
-    z-index: 999;
-    /* to allow scrolling if the screen is not high enough*/
-    overflow: auto;
-    /* this is used to center the modal */
-    display: grid;
-    text-align: center;
-}
-
-
-.modal {
-    margin: auto;
-    display: block;
-    box-sizing: border-box;
-    background: var(--white);
-    padding: 15px;
-    width: 60%;
-    height: 80%;
-    margin-top: 100px;
-    max-width: 600px;
-    min-height: 600px;
-    min-width: 380px;
-    text-align: center;
-    object-fit: contain;
-}
 
 .pokemon-img {
     width: 300px;
@@ -151,66 +106,13 @@ h1, h2, h3 {
 }
 
 
-.modal-close {
-    float: right;
-    border: 0;
-    background: none;
-    color: var(--lightGrey);
-    text-decoration: underline;
-}
-
-.modal-fav {
-    float: left;
-    border: 0;
-    background: none;
-    color: var(--headings);
-
-}
-
-.modal-close:hover,
-.modal-close:focus,
-.modal-fav:hover,
-.moidal-fav:focus {
-    /* lets the mouse appear as a hand when hovering over the button */
-    cursor: pointer;
-    /* reduces the opacity of the button to 80% */
-    opacity: 0.8;
-}
-
-.modal-title {
-    margin-top: auto;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.content-container {
-    text-align: center;
-    color: var(--primary-color);
-    font-size: 25px;
-}
-
-.type-container {
-    text-align: center;
-    color: var(--headings);
-    font-size: 20px;
-}
-
-
-
-#modal-container {
-    display: none;
-}
-
-#modal-container.is-visible {
-    /* CSS for modal container - add own design */
-    display: block;
-}
-
-
-ul {
+.pokemon-list {
     list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 50px;
+
 }
 
 /* RESPONSIVE */
@@ -218,34 +120,19 @@ ul {
 @media all and (max-width: 750px) {
 
     @media all and (min-width: 500px) and (max-width: 750px) {
-        h1 {
-            font-size: 48px;
-        }
+        .pokemon-list {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 10px;
 
-        .button {
-            font-size: 30px;
-            width: 70%;
-        }
-
-        body {
-            line-height: 2.1;
-            text-align: center;
         }
     }
 
     @media all and (max-width: 500px) {
-        h1 {
-            font-size: 35px;
-        }
+        .pokemon-list {
 
-        .button {
-            font-size: 25px;
-            width: 80%;
-        }
+            grid-template-columns: 1fr;
 
-        body {
-            line-height: 1.8;
-            text-align: center;
         }
     }
 
