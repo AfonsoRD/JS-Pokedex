@@ -19,10 +19,20 @@ Text: #3761A8
 
 /* HEADER */
 
-header {
+.navbar {
     background-color: #EF5350;
     color: white;
+    font-family: 'Abril Fatface', cursive;
+
 }
+
+.navbar-brand {
+    font-size: 2.25rem;
+    color: white;
+}
+
+
+
 
 /* BODY */
 
@@ -40,7 +50,7 @@ header {
 }
 
 .page-content {
-    margin-top: 2%;
+    margin-top: 100px;
     margin-bottom: 2%;
     margin-left: 5%;
     margin-right: 5%;
@@ -148,6 +158,7 @@ h3 {
     padding: 15px;
     width: 60%;
     height: 80%;
+    margin-top: 100px;
     max-width: 600px;
     min-height: 600px;
     min-width: 380px;
