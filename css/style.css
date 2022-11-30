@@ -47,7 +47,7 @@ Text: #3761A8
 }
 
 .page-content {
-    margin-top: 100px;
+    margin-top: 7%;
     text-align: center;
     justify-content: center;
 }
@@ -121,7 +121,10 @@ h1, h2, h3 {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             row-gap: 10px;
+        }
 
+        .page-content {
+            margin-top: 15%;
         }
     }
 
@@ -130,6 +133,10 @@ h1, h2, h3 {
 
             grid-template-columns: 1fr;
 
+        }
+
+        .page-content {
+            margin-top: 20%;
         }
     }
 
