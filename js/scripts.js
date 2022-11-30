@@ -37,6 +37,7 @@ let pokemonRepository = (function () {
     let pokemonList = document.querySelector(".pokemon-list");
 
     let listPokemon = document.createElement("li");
+    listPokemon.classList.add("list-group-item");
 
     let button = document.createElement("button");
     button.innerText = pokemon.name;
@@ -65,39 +66,39 @@ let pokemonRepository = (function () {
       let modal = document.createElement("div");
       modal.classList.add("modal");
 
-      /* create close button*/
+      /* create close button */
       let closeButtonElement = document.createElement("button");
       closeButtonElement.classList.add("modal-close");
       closeButtonElement.innerHTML = "Close";
       closeButtonElement.addEventListener("click", hideModal);
 
-      /* create fav button*/
+      /* create fav button */
       let favButtonElement = document.createElement("button");
       favButtonElement.classList.add("modal-fav");
       favButtonElement.innerHTML = "❤️";
       favButtonElement.addEventListener("click", addFavourite);
 
-      /*Title with Pokemon name*/
+      /*Title with Pokemon name */
       let pokemonName = document.createElement("h1");
       pokemonName.classList.add("modal-title");
       pokemonName.innerHTML = `#${pokemon.id} ${pokemon.name}`;
 
-      /*Add img*/
+      /*Add img */
 
       let pokemonImage = document.createElement("img");
       pokemonImage.classList.add("pokemon-img");
       pokemonImage.src = pokemon.imageUrl;
       pokemonImage.alt = "Pokemon image";
 
-      /* Element to display weight and height*/
+      /* Element to display weight and height */
       let contentElement = document.createElement("p");
       contentElement.classList.add("content-container");
       contentElement.innerHTML = `Weight: ${pokemon.weight} / Height: ${pokemon.height}`;
 
-      /* Element to display Type*/
+      /* Element to display Type */
       let contentTypeElement = document.createElement("p");
       contentTypeElement.classList.add("type-container");
-      contentTypeElement.innerHTML = "Type: X / Y";
+      contentTypeElement.innerHTML = `Type: ${pokemon.types}`;
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(favButtonElement);
@@ -170,7 +171,7 @@ let pokemonRepository = (function () {
         pokemon.id = details.id;
         pokemon.height = details.height;
         pokemon.weight = details.weight;
-        pokemon.types = details.types;
+        pokemon.types = details.types.map((type) => type.type.name).join(", ");
       })
       .catch(function (e) {
         hideLoadingMessage();
