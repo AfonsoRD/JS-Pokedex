@@ -44,10 +44,11 @@ Text: #3761A8
 
 .button {
     border: none;
-    background-color: #EF5350;
-    color: #fafad2;
-    border-radius: 0 15px;
-    border-bottom: 3px solid #3761A8;
+    background-color: #FED269;
+    color: #49896F;
+    font-size: large;
+    border-radius: 15px 15px;
+    border-bottom: 2px solid #49896F;
     transition: 0.2s opacity;
 
 }
@@ -62,8 +63,8 @@ Text: #3761A8
 
 
 body {
-    background-color: #fafad2;
-    color: #3761A8;
+    background-color: #A2D7D5;
+    color: #49896F;
     font-size: 30px;
     margin-top: 100px;
 }
@@ -78,7 +79,7 @@ h1 {
     font-family: 'Abril Fatface', cursive;
     font-size: 45px;
     font-weight: bold;
-    color: #3761A8;
+    color: #49896F;
 }
 
 
@@ -90,39 +91,36 @@ h1 {
 
 
 .pokemon-list {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    row-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
-.list-group-item {
+.list-group {
+    flex-direction: row;
+}
+
+.card {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
     background-color: #fafad2;
-    border: none;
+    background-clip: border-box;
+    border: 2px solid #FED269;
+    border-radius: 15px 15px;
+    align-items: center;
+    align-content: center;
+    padding: 15px;
+    margin: 45px;
 }
 
-/* RESPONSIVE */
+.card-img {
+    width: 150px;
+    height: 150px;
+}
 
-@media all and (max-width: 750px) {
-
-    @media all and (min-width: 500px) and (max-width: 750px) {
-        .pokemon-list {
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            row-gap: 10px;
-        }
-
-    }
-
-    @media all and (max-width: 500px) {
-        .pokemon-list {
-
-            grid-template-columns: 1fr;
-
-        }
-
-    }
-
+.modal-content {
+    background-color: #fafad2;
 }

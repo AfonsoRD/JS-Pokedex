@@ -34,28 +34,31 @@ let pokemonRepository = (function () {
 
   //forEach loop for pokemon list
   function addListItem(pokemon) {
-    let pokemonList = document.querySelector(".pokemon-list");
-    let listPokemon = document.createElement("li");
-    listPokemon.classList.add("list-group-item");
+    pokemonRepository.loadDetails(pokemon).then(function () {
+      let list = $(".pokemon-list");
+      let card = $('<div class="card" style="width:250px"></div>');
+      let cardImage = $('<img class="card-img" alt="Card image" />');
+      cardImage.attr("src", pokemon.imageUrl);
+      let cardTitle = $(
+        '<h5 class="card-title; text-uppercase">' + pokemon.name + "</h5>"
+      );
+      let cardBody = $('<div class="card-body" style= height:60%"></div>');
+      let detailsButton = $(
+        '<button type="button" class="button" data-toggle="modal" data-target="#pokemon-modal">Details</button>'
+      );
 
-    let button = document.createElement("button");
-    button.innerText =
-      pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
-    button.classList.add("button");
-    button.setAttribute("data-toggle", "modal");
-    button.setAttribute("data-target", "#pokemon-modal");
-    button.classList.add("col");
+      list.append(card);
+      card.append(cardImage);
+      card.append(cardTitle);
+      card.append(cardBody);
+      cardBody.append(detailsButton);
 
-    listPokemon.classList.add("list-items");
-    listPokemon.appendChild(button);
-    pokemonList.appendChild(listPokemon);
-
-    eventListener(button, pokemon);
-  }
-
-  function eventListener(button, pokemon) {
-    button.addEventListener("click", function () {
-      showDetails(pokemon);
+      detailsButton.on("click", () => {
+        showDetails(pokemon);
+      });
+      card.on("click", () => {
+        showDetails(pokemon);
+      });
     });
   }
 
