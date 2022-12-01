@@ -19,33 +19,25 @@ Text: #3761A8
 .navbar {
     background-color: #EF5350;
     color: white;
-    font-family: 'Abril Fatface', cursive;
 
 }
 
 .navbar-brand {
     font-size: 2.25rem;
     color: white;
+    font-family: 'Abril Fatface', cursive;
 }
 
 
 /* BODY */
 
 .loading {
-    position: fixed;
     width: 500px;
-    left: 50%;
-    top: 50%;
-    margin-left: -250px;
-    /* calculation = 500px/2 = 250px */
-    margin-top: -200px;
-    /* to show it above other content */
     z-index: 999;
 
 }
 
 .page-content {
-    margin-top: 7%;
     text-align: center;
     justify-content: center;
 }
@@ -73,6 +65,7 @@ body {
     background-color: #fafad2;
     color: #3761A8;
     font-size: 30px;
+    margin-top: 100px;
 }
 
 
@@ -81,22 +74,6 @@ body {
 }
 
 h1 {
-
-    font-family: 'Abril Fatface', cursive;
-    font-size: 45px;
-    font-weight: bold;
-    color: #3761A8;
-}
-
-h2 {
-
-    font-family: 'Abril Fatface', cursive;
-    font-size: 45px;
-    font-weight: bold;
-    color: #3761A8;
-}
-
-h3 {
 
     font-family: 'Abril Fatface', cursive;
     font-size: 45px;
@@ -117,7 +94,7 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    row-gap: 50px;
+    row-gap: 20px;
 
 }
 
@@ -137,9 +114,6 @@ h3 {
             row-gap: 10px;
         }
 
-        .page-content {
-            margin-top: 15%;
-        }
     }
 
     @media all and (max-width: 500px) {
@@ -149,9 +123,6 @@ h3 {
 
         }
 
-        .page-content {
-            margin-top: 20%;
-        }
     }
 
 }
