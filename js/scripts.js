@@ -40,7 +40,10 @@ let pokemonRepository = (function () {
       let cardImage = $('<img class="card-img" alt="Card image" />');
       cardImage.attr("src", pokemon.imageUrl);
       let cardTitle = $(
-        '<h5 class="card-title; text-uppercase">' + pokemon.name + "</h5>"
+        '<h5 class="card-title;">' +
+          pokemon.name.charAt(0).toUpperCase() +
+          pokemon.name.slice(1) +
+          "</h5>"
       );
       let cardBody = $('<div class="card-body" style= height:60%"></div>');
       let detailsButton = $(
@@ -94,7 +97,13 @@ let pokemonRepository = (function () {
     let weightElement = $("<p>" + "Weight: " + pokemon.weight + "</p>");
 
     //creating element for types
-    let typesElement = $("<p>" + "Type: " + pokemon.types + "</p>");
+    let typesElement = $(
+      "<p>" +
+        "Type: " +
+        pokemon.types.charAt(0).toUpperCase() +
+        pokemon.types.slice(1) +
+        "</p>"
+    );
 
     modalTitle.append(nameElement);
     modalBody.append(imageElement);
