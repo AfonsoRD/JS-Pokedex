@@ -83,7 +83,6 @@ h1 {
     font-family: 'Abril Fatface', cursive;
     font-size: 45px;
     font-weight: bold;
-    color: var(--primary-color);
 }
 
 
@@ -126,6 +125,7 @@ h1 {
     height: 150px;
 }
 
-.modal-content {
-    background-color: var(--lightYellow);
+.modal-header {
+    background-color: var(--headings);
+    color: var(--white);
 }
