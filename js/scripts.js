@@ -157,15 +157,23 @@ let pokemonRepository = (function () {
     modalBody.append(typesElement);
   }
 
-  let searchBar = document.getElementById("search-bar");
+  function filteredPokemons() {
+    let card = document.querySelectorAll(".card");
+    let search_bar = document.getElementById("search-bar").value;
 
-  searchBar.addEventListener("keyup", (e) => {
-    let searchString = e.target.value;
-    let filteredPokemons = pokemonList.filter((pokemon) => {
-      return pokemon.name.includes(searchString);
-    });
-    console.log(filteredPokemons);
-    //loadDetails(filteredPokemons);
+    for (var i = 0; i < card.length; i++) {
+      if (card[i].innerText.toLowerCase().includes(search_bar.toLowerCase())) {
+        card[i].classList.remove("is-hidden");
+      } else {
+        card[i].classList.add("is-hidden");
+      }
+    }
+  }
+
+  let searchInput = document.getElementById("search-bar");
+
+  searchInput.addEventListener("keyup", () => {
+    filteredPokemons();
   });
 
   return {
