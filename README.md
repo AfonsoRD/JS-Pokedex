@@ -15,6 +15,6 @@ The small Pokédex is an HTML5, CSS3, and JavaScript Web App that loads data fro
 
 ###### Technical Dependencies
 
-HTML5, CSS3, ES6
+HTML, CSS, ES6, Bootstrap and jQuery
 
 ###### [Pokédex APP](https://afonsord.github.io/JS-Pokedex/)
