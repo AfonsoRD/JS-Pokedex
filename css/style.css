@@ -20,16 +20,20 @@ Text: #3761A8
 
 body {
     background-color: var(--background);
+    font-family: 'Allerta Stencil', sans-serif;
     color: var(--primary-color);
     font-size: 30px;
     margin-top: 100px;
 }
 
 h1 {
-
-    font-family: 'Abril Fatface', cursive;
-    font-size: 45px;
+    font-family: 'Zen Dots', cursive;
+    font-size: 2.1rem;
     font-weight: bold;
+}
+
+.h5, h5 {
+    font-size: 1.8rem;
 }
 
 .page-content {
@@ -43,6 +47,15 @@ h1 {
 
 }
 
+.list-group {
+    flex-direction: row;
+}
+
+a:focus,
+a:hover {
+    color: var(--button);
+}
+
 .navbar {
     background-color: var(--headings);
     color: white;
@@ -52,7 +65,7 @@ h1 {
 .navbar-brand {
     font-size: 2.25rem;
     color: white;
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Allerta Stencil', sans-serif;
 }
 
 
@@ -101,6 +114,7 @@ h1 {
     z-index: 999;
 
 }
+
 
 .button {
     border: none;
