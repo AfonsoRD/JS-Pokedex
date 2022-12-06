@@ -18,7 +18,30 @@ Text: #3761A8
     --white: #fff
 }
 
-/* HEADER */
+body {
+    background-color: var(--background);
+    color: var(--primary-color);
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+h1 {
+
+    font-family: 'Abril Fatface', cursive;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.page-content {
+    text-align: center;
+    justify-content: center;
+}
+
+.pokemon-list {
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
 
 .navbar {
     background-color: var(--headings);
@@ -33,17 +56,50 @@ Text: #3761A8
 }
 
 
-/* BODY */
+
+.card {
+    position: relative;
+    display: inline-flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: var(--lightYellow);
+    background-clip: border-box;
+    border: 2px solid #FED269;
+    border-radius: 15px 15px;
+    align-items: center;
+    align-content: center;
+    padding: 15px;
+    margin: 45px;
+}
+
+.is-hidden {
+    display: none;
+}
+
+
+.pokemon-img {
+    width: 300px;
+    height: 300px;
+
+}
+
+
+.card-img {
+    width: 150px;
+    height: 150px;
+}
+
+.modal-header {
+    background-color: var(--headings);
+    color: var(--white);
+}
 
 .loading {
     width: 500px;
     z-index: 999;
 
-}
-
-.page-content {
-    text-align: center;
-    justify-content: center;
 }
 
 .button {
@@ -63,69 +119,4 @@ Text: #3761A8
     cursor: pointer;
     /* reduces the opacity of the button to 80% */
     opacity: 0.8;
-}
-
-
-body {
-    background-color: var(--background);
-    color: var(--primary-color);
-    font-size: 30px;
-    margin-top: 100px;
-}
-
-
-.is-hidden {
-    display: none;
-}
-
-h1 {
-
-    font-family: 'Abril Fatface', cursive;
-    font-size: 45px;
-    font-weight: bold;
-}
-
-
-.pokemon-img {
-    width: 300px;
-    height: 300px;
-
-}
-
-
-.pokemon-list {
-    flex-wrap: wrap;
-    justify-content: center;
-
-}
-
-.list-group {
-    flex-direction: row;
-}
-
-.card {
-    position: relative;
-    display: inline-flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: var(--lightYellow);
-    background-clip: border-box;
-    border: 2px solid #FED269;
-    border-radius: 15px 15px;
-    align-items: center;
-    align-content: center;
-    padding: 15px;
-    margin: 45px;
-}
-
-.card-img {
-    width: 150px;
-    height: 150px;
-}
-
-.modal-header {
-    background-color: var(--headings);
-    color: var(--white);
 }
