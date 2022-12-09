@@ -1,269 +1,101 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: >0.3%,last 2 versions,not dead
-*/
-
-/*
-Colors:
-
-Background: #fafad2
-Header & Footer: #EF5350
-Text: #3761A8
-
-*/
-
 body {
-    background-color: #A2D7D5;
-    font-family: 'Allerta Stencil', sans-serif;
+    background-color: #a2d7d5;
     color: #006d47;
+    font-family: Allerta Stencil, sans-serif;
     font-size: 30px;
-    margin-top: 100px;
+    margin-top: 100px
 }
 
 h1 {
-    font-family: 'Zen Dots', cursive;
+    font-family: Zen Dots, cursive;
     font-size: 2.1rem;
-    font-weight: bold;
+    font-weight: 700
 }
 
 .h5, h5 {
-    font-size: 1.8rem;
+    font-size: 1.8rem
 }
 
 .page-content {
-    text-align: center;
     justify-content: center;
+    text-align: center
 }
 
 .pokemon-list {
     flex-wrap: wrap;
-    justify-content: center;
-
+    justify-content: center
 }
 
 .list-group {
-    flex-direction: row;
+    flex-direction: row
 }
 
-a:focus {
-    color: #fed269;
-}
-
-a:hover {
-    color: #fed269;
+a:focus, a:hover {
+    color: #fed269
 }
 
 .navbar {
     background-color: #e6241c;
-    color: white;
-
+    color: #fff
 }
 
 .navbar-brand {
-    font-size: 2.25rem;
-    color: white;
-    font-family: 'Allerta Stencil', sans-serif;
+    color: #fff;
+    font-family: Allerta Stencil, sans-serif;
+    font-size: 2.25rem
 }
 
-
-
 .card {
-    position: relative;
+    word-wrap: break-word;
+    align-content: center;
+    align-items: center;
+    background-clip: border-box;
+    background-color: #fafad2;
+    border: 2px solid #fed269;
+    border-radius: 15px 15px;
     display: inline-flex;
     flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fafad2;
-    background-clip: border-box;
-    border: 2px solid #FED269;
-    border-radius: 15px 15px;
-    align-items: center;
-    align-content: center;
-    padding: 15px;
     margin: 45px;
+    min-width: 0;
+    padding: 15px;
+    position: relative
 }
 
 .is-hidden {
-    display: none;
+    display: none
 }
-
 
 .pokemon-img {
-    width: 300px;
     height: 300px;
-
+    width: 300px
 }
 
-
 .card-img {
-    width: 150px;
     height: 150px;
+    width: 150px
 }
 
 .modal-header {
     background-color: #e6241c;
-    color: #fff;
+    color: #fff
 }
 
 .loading {
     width: 500px;
-    z-index: 999;
-
+    z-index: 999
 }
-
 
 .button {
-    border: none;
     background-color: #fed269;
+    border: none;
+    border-bottom: 2px solid #006d47;
+    border-radius: 15px 15px;
     color: #006d47;
     font-size: large;
-    border-radius: 15px 15px;
-    border-bottom: 2px solid #006d47;
-    transition: 0.2s opacity;
-
+    transition: opacity .2s
 }
 
-.button:hover,
-.button:focus {
-    /* lets the mouse appear as a hand when hovering over the button */
+.button:focus, .button:hover {
     cursor: pointer;
-    /* reduces the opacity of the button to 80% */
-    opacity: 0.8;
-}
-
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: >0.3%,last 2 versions,not dead
-*/
-
-/*
-Colors:
-
-Background: #fafad2
-Header & Footer: #EF5350
-Text: #3761A8
-
-*/
-
-body {
-    background-color: #A2D7D5;
-    font-family: 'Allerta Stencil', sans-serif;
-    color: #006d47;
-    font-size: 30px;
-    margin-top: 100px;
-}
-
-h1 {
-    font-family: 'Zen Dots', cursive;
-    font-size: 2.1rem;
-    font-weight: bold;
-}
-
-.h5, h5 {
-    font-size: 1.8rem;
-}
-
-.page-content {
-    text-align: center;
-    justify-content: center;
-}
-
-.pokemon-list {
-    flex-wrap: wrap;
-    justify-content: center;
-
-}
-
-.list-group {
-    flex-direction: row;
-}
-
-a:focus {
-    color: #fed269;
-}
-
-a:hover {
-    color: #fed269;
-}
-
-.navbar {
-    background-color: #e6241c;
-    color: white;
-
-}
-
-.navbar-brand {
-    font-size: 2.25rem;
-    color: white;
-    font-family: 'Allerta Stencil', sans-serif;
-}
-
-
-
-.card {
-    position: relative;
-    display: inline-flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fafad2;
-    background-clip: border-box;
-    border: 2px solid #FED269;
-    border-radius: 15px 15px;
-    align-items: center;
-    align-content: center;
-    padding: 15px;
-    margin: 45px;
-}
-
-.is-hidden {
-    display: none;
-}
-
-
-.pokemon-img {
-    width: 300px;
-    height: 300px;
-
-}
-
-
-.card-img {
-    width: 150px;
-    height: 150px;
-}
-
-.modal-header {
-    background-color: #e6241c;
-    color: #fff;
-}
-
-.loading {
-    width: 500px;
-    z-index: 999;
-
-}
-
-
-.button {
-    border: none;
-    background-color: #fed269;
-    color: #006d47;
-    font-size: large;
-    border-radius: 15px 15px;
-    border-bottom: 2px solid #006d47;
-    transition: 0.2s opacity;
-
-}
-
-.button:hover,
-.button:focus {
-    /* lets the mouse appear as a hand when hovering over the button */
-    cursor: pointer;
-    /* reduces the opacity of the button to 80% */
-    opacity: 0.8;
+    opacity: .8
 }
